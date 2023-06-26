@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:user_repo/data/network/client.dart';
+import 'package:user_repo/data/persistence/persistence_data_source.dart';
 import 'package:user_repo/data/repos/user_repo_impl.dart';
 import 'package:user_repo/domain/use_cases/user_controller.dart';
 import 'package:user_repo/presentation/ui/user_page.dart';
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
         ),
         home: BlocProvider<UserBloc>(
           create: (context) {
-            return UserBloc(UserController(UserRepoImpl()));
+            return UserBloc(UserController(UserRepoImpl(PersistenceDataSource() /* or Client() */)));
           },
           child: const UserPage(title: 'Flutter Demo Home Page'),
         ));
