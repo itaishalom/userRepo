@@ -6,10 +6,11 @@ import 'package:user_repo/domain/repos/user_repo.dart';
 
 class UserRepoImpl implements UserRepo {
   final UserDataSource _userDataSource;
+
   UserRepoImpl(UserDataSource dataSource) : _userDataSource = dataSource;
 
   @override
-  Future<List<User>?> getUsers() async{
+  Future<List<User>?> getUsers() async {
     return await _userDataSource.getUsers();
   }
 
@@ -18,7 +19,6 @@ class UserRepoImpl implements UserRepo {
     _userDataSource.saveUser(user);
     return true;
   }
-
 
   @override
   User generateUser(String firstName, String id, String email, String lastName) {
