@@ -1,4 +1,4 @@
-import 'package:user_repo/data/entities/user.dart';
+import 'package:user_repo/data/entities/user.dart'; // user model is the same so it's not from the domain layer
 import 'package:user_repo/domain/repos/user_repo.dart';
 
 class UserController {
