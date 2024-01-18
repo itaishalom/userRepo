@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:user_repo/data/entities/user.dart';
+import 'package:user_repo/data/entities/user.dart';  // Should only know the domain but the user entity is shared
 import 'package:user_repo/domain/use_cases/user_controller.dart';
 import 'package:user_repo/presentation/user_bloc/user_bloc_def.dart';
 
